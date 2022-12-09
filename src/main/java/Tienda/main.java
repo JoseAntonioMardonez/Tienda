@@ -8,10 +8,14 @@ public class main {
     public static void main(String [] args){
         Tienda tienda = new Tienda();
         Producto producto1 = new Producto("Producto 1",20000,"P0001",10);
+        Producto producto2 = new Producto("Producto 2",30000,"P0002",15);
+        Producto producto3 = new Producto("Producto 3",23000,"P0003",45);
         Administrador administrador = new Administrador("Admin","12345");
         tienda = GestorDatos.leerArchivoProductos(tienda,"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Productos");
         tienda.agregarAdministrador(administrador);
         tienda.agregarProducto(producto1);
+        tienda.agregarProducto(producto2);
+        tienda.agregarProducto(producto3);
         new VentanaPrincipal(tienda);
 
     }
