@@ -29,12 +29,6 @@ public class Ventana extends JFrame implements ActionListener{
         label.setFont(this.fuenteTitulo);
         this.add(label);
     }
-    protected void generarJLabelImagen(JLabel imagen,String rutaImagen,int posicionX, int posicionY, int largoX, int largoY){
-        imagen= new JLabel();
-        imagen.setBounds(posicionX, posicionY, largoX, largoY);
-        imagen.setIcon(new ImageIcon(rutaImagen));
-        this.add(imagen);
-    }
     protected JButton generarBoton(String texto, int posicionX, int posicionY, int largoX, int largoY){
         JButton boton= new JButton(texto);
         boton.setBounds(posicionX, posicionY, largoX, largoY);

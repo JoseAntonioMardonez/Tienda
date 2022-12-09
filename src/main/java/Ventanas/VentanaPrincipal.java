@@ -25,7 +25,6 @@ public class VentanaPrincipal extends Ventana{
 
     private void generarElementosVentana(){
         generarMensajeMenu();
-        generarImagenUsuario();
         generarTextoUsuario();
         generarEntradaDeTextoNombre();
         generarTextoContrasena();
@@ -41,11 +40,6 @@ public class VentanaPrincipal extends Ventana{
         String textoUsuario = "Usuario:";
         super.generarJLabel(this.textoUsuario, textoUsuario, 150, 90, 500, 30);
     }
-    private void generarImagenUsuario(){
-        String rutaImagen = "C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Imagenes\\usuario.jpg";
-        super.generarJLabelImagen(this.imagenUsuario,rutaImagen,150,400,150,150);
-    }
-
     private void generarEntradaDeTextoNombre() {
 
         this.entradaTextoUsuario = super.generarJTextField(150,120,200,20);
@@ -89,7 +83,7 @@ public class VentanaPrincipal extends Ventana{
                     case "Administrador":
                         new VentanaAdministrador(tienda);
                         break;
-                    case "Cliente":
+                    case "Vendedor":
                         new VentanaVendedor(tienda);
                         break;
                 }
