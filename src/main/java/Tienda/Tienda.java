@@ -27,6 +27,9 @@ public class Tienda {
     public ArrayList<Venta> getVentas() {
         return ventas;
     }
+    public ArrayList<Cliente> getClientes() {
+        return clientes;
+    }
     public void agregarAdministrador(Administrador administrador) {
         this.usuarios.add(administrador);
     }
@@ -63,6 +66,16 @@ public class Tienda {
         for(Producto producto : this.productos){
             if(producto.getCodigo().equals(codigo)){
                 return producto;
+            }
+        }
+        return null;
+
+
+    }
+    public Cliente buscarCliente(String rut){
+        for(Cliente cliente : this.clientes){
+            if(cliente.getRut().equals(rut)){
+                return cliente;
             }
         }
         return null;

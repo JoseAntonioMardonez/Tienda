@@ -1,16 +1,16 @@
 package Tienda;
 
-public class Producto {
+public class ProductoCarrito {
     private String nombre;
     private int precio;
 
     private String codigo;
-    private int existencias;
+    private int cantidad;
 
-    public Producto(String nombre, int precio, String codigo, int existencias){
+    public ProductoCarrito(String nombre, int precio, String codigo, int cantidad){
         this.nombre = nombre;
         this.precio = precio;
-        this.existencias = existencias;
+        this.cantidad = cantidad;
         this.codigo = codigo;
     }
 
@@ -19,18 +19,18 @@ public class Producto {
     }
 
 
-    public void setExistencias(int existencias){
-        if(existencias>=0){
-            this.existencias = existencias;
-        } else if(existencias<0){
+    public void setCantidad(int cantidad){
+        if(cantidad>=0){
+            this.cantidad = cantidad;
+        } else if(cantidad<0){
             System.out.println("la cantidad en exitencias no puede ser negativa");
         } else {
             System.out.println("El valor ingresado no es válido, intente denuevo");
         }
     }
 
-    public void sumarExistencias(int suma){
-        this.existencias = this.existencias + suma;
+    public void sumarCantidad(int suma){
+        this.cantidad = this.cantidad + suma;
     }
 
     public String getNombre(){
@@ -41,8 +41,8 @@ public class Producto {
         return this.precio;
     }
 
-    public int getExistencias(){
-        return this.existencias;
+    public int getCantidad(){
+        return this.cantidad;
     }
 
     public String getCodigo(){
@@ -50,6 +50,6 @@ public class Producto {
     }
 
     public String toString() {
-        return codigo+", "+nombre+", "+precio+", "+existencias;
+        return codigo+", "+nombre+", "+precio+", "+cantidad;
     }
 }

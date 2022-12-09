@@ -1,38 +1,32 @@
 package Tienda;
 
+import java.util.ArrayList;
+
 public class Venta {
 
     private String nombre;
-    private int valor;
-    private int codigo;
-    private int cantidad;
+    private Tienda tienda;
+    public ArrayList<ProductoCarrito> carrito;
+    private Cliente cliente;
 
 
-    public Venta(String nombre, int valor, int codigo, int cantidad) {
+    public Venta(Tienda tienda,String nombre,Cliente cliente) {
         this.nombre = nombre;
-        this.valor = valor;
-        this.codigo = codigo;
-        this.cantidad = cantidad;
+        this.carrito = new ArrayList<ProductoCarrito>();
+        this.cliente = cliente;
+        this.tienda = tienda;
+    }
+    public ArrayList<ProductoCarrito> getCarrito() {
+        return carrito;
+    }
+    public void agregarProducto(String codigo,int cantidad) {
+        Producto producto = tienda.buscarProducto(codigo);
+        ProductoCarrito productoCarrito = new ProductoCarrito(producto.getNombre(),producto.getPrecio(), producto.getCodigo(), cantidad);
+        this.carrito.add(productoCarrito);
     }
 
     public String getNombre() {
         return this.nombre;
-    }
-
-    public int getValor() {
-        return this.valor;
-    }
-
-    public int getCodigo() {
-        return this.codigo;
-    }
-
-    public int getCantidad() {
-        return this.cantidad;
-    }
-
-    public int returnCantidad(){
-        return this.cantidad;
     }
 
 }

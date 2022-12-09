@@ -95,6 +95,9 @@ public class VentanaPrincipal extends Ventana{
         }
         if(e.getSource() == this.botonSalida){
             GestorDatos.registrarDatos(tienda.getUsuarios(),"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Usuarios");
+            GestorDatos.registrarDatos(tienda.getProductos(),"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Productos");
+            GestorDatos.registrarDatos(tienda.getClientes(),"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Clientes");
+            GestorDatos.registrarDatos(tienda.getVentas(),"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Ventas");
             this.dispose();
             System.exit(0);
         }

@@ -12,9 +12,10 @@ public class main {
         Producto producto3 = new Producto("Producto 3",23000,"P0003",45);
         Vendedor vendedor = new Vendedor("Vendedor","54321");
         Administrador administrador = new Administrador("Admin","12345");
-        tienda = GestorDatos.leerArchivoProductos(tienda,"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Productos");
+        Cliente cliente = new Cliente("Cliente","11.111.111-1");
         tienda.agregarAdministrador(administrador);
         tienda.agregarVendedor(vendedor);
+        tienda.agregarCliente(cliente);
         tienda.agregarProducto(producto1);
         tienda.agregarProducto(producto2);
         tienda.agregarProducto(producto3);

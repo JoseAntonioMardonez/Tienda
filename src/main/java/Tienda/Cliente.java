@@ -11,6 +11,9 @@ public class Cliente{
         this.rut = rut;
     }
     //Métodos
+    public String getRut(){
+        return this.rut;
+    }
     /*public String getTipo() {
         return "Cliente";
     }*/

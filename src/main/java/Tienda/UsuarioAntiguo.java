@@ -28,7 +28,7 @@ public class UsuarioAntiguo {
     public int cantidadVendida(ArrayList<Venta> ventas){
         int cantidadVendida = 0;
         for(Venta producto: ventas){
-            cantidadVendida += producto.getCantidad();
+            //cantidadVendida += producto.getCantidad();
         }
         return cantidadVendida;
     }
@@ -39,7 +39,7 @@ public class UsuarioAntiguo {
     public int valorVendido(ArrayList<Venta> ventas){
         int valorVendido = 0;
         for(Venta producto: ventas){
-            valorVendido += producto.getValor();
+            //valorVendido += producto.getValor();
         }
         return valorVendido;
     }

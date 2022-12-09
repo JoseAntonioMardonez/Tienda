@@ -59,6 +59,11 @@ public class VentanaVendedor extends Ventana{
             //Cierra la ventana actual
             this.dispose();
         }
+        if (e.getSource() == this.botonVenta) {
+            VentanaVentaPrincipal ventaPrincipal = new VentanaVentaPrincipal(tienda);
+            //Cierra la ventana actual
+            this.dispose();
+        }
         if (e.getSource() == this.botonVolver) {
             new VentanaPrincipal(tienda);
             //Cierra la ventana actual

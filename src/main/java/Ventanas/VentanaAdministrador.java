@@ -10,6 +10,7 @@ public class VentanaAdministrador extends Ventana{
     private JButton botonBuscarProducto;
     private JButton botonAgregarProducto;
     private JButton botonVolver;
+    private JLabel textoMenu;
     private Tienda tienda;
 
     public VentanaAdministrador(Tienda tienda) {
@@ -19,10 +20,15 @@ public class VentanaAdministrador extends Ventana{
     }
 
     private void generarElementosVentana() {
+        generarMensajeEncabezado();
         generarBotonMostrarInventario();
         generarBotonBuscarProducto();
         generarBotonAgregarProducto();
         generarBotonVolver();
+    }
+    private void generarMensajeEncabezado() {
+        String textoEncabezado = "Administrador";
+        super.generarJLabelEncabezado(this.textoMenu, textoEncabezado, 150, 30, 500, 30);
     }
     private void generarBotonMostrarInventario() {
         String textoBoton = "Mostrar Inventario";
@@ -56,6 +62,11 @@ public class VentanaAdministrador extends Ventana{
         }
         if (e.getSource() == this.botonBuscarProducto) {
             VentanaBuscarProducto buscarProducto = new VentanaBuscarProducto(tienda);
+            //Cierra la ventana actual
+            this.dispose();
+        }
+        if (e.getSource() == this.botonAgregarProducto) {
+            VentanaAgregarProducto agregarProducto = new VentanaAgregarProducto(tienda);
             //Cierra la ventana actual
             this.dispose();
         }
