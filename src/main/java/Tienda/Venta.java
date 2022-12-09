@@ -24,6 +24,13 @@ public class Venta {
         ProductoCarrito productoCarrito = new ProductoCarrito(producto.getNombre(),producto.getPrecio(), producto.getCodigo(), cantidad);
         this.carrito.add(productoCarrito);
     }
+    public int calcularTotal(){
+        int total = 0;
+        for(ProductoCarrito productoCarrito : this.carrito){
+            total += productoCarrito.getPrecio()*productoCarrito.getCantidad();
+        }
+        return total;
+    }
 
     public String getNombre() {
         return this.nombre;

@@ -32,7 +32,7 @@ public class VentanaBuscarProducto extends Ventana {
     }
 
     private void generarMensajeMenu() {
-        String textoBienvenida = "Sistema Tienda - SMS";
+        String textoBienvenida = "Buscar Producto";
         super.generarJLabelEncabezado(this.textoMenu, textoBienvenida, 150, 30, 500, 30);
     }
 

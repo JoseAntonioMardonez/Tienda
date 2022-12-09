@@ -11,6 +11,7 @@ public class VentanaVendedor extends Ventana{
     private JButton botonVenta;
     private JButton botonVolver;
     private Tienda tienda;
+    private JLabel textoMenu;
 
     public VentanaVendedor(Tienda tienda) {
         super("Vendedor",500,500);
@@ -19,10 +20,15 @@ public class VentanaVendedor extends Ventana{
     }
 
     private void generarElementosVentana() {
+        generarMensajeEncabezado();
         generarBotonMostrarInventario();
         generarBotonBuscarProducto();
         generarBotonVenta();
         generarBotonVolver();
+    }
+    private void generarMensajeEncabezado() {
+        String textoEncabezado = "Vendedor";
+        super.generarJLabelEncabezado(this.textoMenu, textoEncabezado, 150, 30, 500, 30);
     }
     private void generarBotonMostrarInventario() {
         String textoBoton = "Mostrar Inventario";
@@ -60,7 +66,7 @@ public class VentanaVendedor extends Ventana{
             this.dispose();
         }
         if (e.getSource() == this.botonVenta) {
-            VentanaVentaPrincipal ventaPrincipal = new VentanaVentaPrincipal(tienda);
+            VentanaVenta venta = new VentanaVenta(tienda);
             //Cierra la ventana actual
             this.dispose();
         }
