@@ -41,7 +41,7 @@ public class VentanaAgregarUsuarios extends Ventana {
     //Boton Agregar Vendedor
     private void generarBotonAgregarVendedor() {
         String textoBoton = "Agregar Vendedor";
-        this.botonAgregarVendedor = super.generarBoton(textoBoton, 175, 340, 150, 40);
+        this.botonAgregarVendedor = super.generarBoton(textoBoton, 175, 300, 150, 40);
         this.add(this.botonAgregarVendedor);
         this.botonAgregarVendedor.addActionListener(this);
     }

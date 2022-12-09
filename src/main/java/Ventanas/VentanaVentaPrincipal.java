@@ -13,6 +13,7 @@ public class VentanaVentaPrincipal extends Ventana {
     private JButton botonVerCarrito;
     private JButton botonAgregarProductos;
     private JButton botonVolver;
+    private JButton botonVenta;
     private JLabel textoTotal;
     private Tienda tienda;
     private Venta venta;
@@ -59,7 +60,13 @@ public class VentanaVentaPrincipal extends Ventana {
     }*/
     private void generarTextoTotal() {
         String textoUsuario = "Total: $"+venta.calcularTotal();
-        super.generarJLabel(this.textoTotal, textoUsuario, 150, 340, 500, 30);
+        super.generarJLabel(this.textoTotal, textoUsuario, 150, 90, 500, 30);
+    }
+    private void generarBotonVender() {
+        String textoBoton = "Terminar Venta";
+        this.botonVenta = super.generarBoton(textoBoton, 175, 340, 150, 40);
+        this.add(this.botonVenta);
+        this.botonVenta.addActionListener(this);
     }
     private void generarBotonVolver() {
         String textoBoton = "Volver";
@@ -70,6 +77,14 @@ public class VentanaVentaPrincipal extends Ventana {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.botonAgregarProductos) {
             VentanaAgregarProductoCarrito ventanaAgregarProductoCarrito = new VentanaAgregarProductoCarrito(tienda,venta);
+            //Cierra la ventana actual
+            this.dispose();
+
+        }
+        if (e.getSource() == this.botonVenta) {
+            //Agregar Código Boleta
+
+            new VentanaVendedor(tienda);
             //Cierra la ventana actual
             this.dispose();
 
