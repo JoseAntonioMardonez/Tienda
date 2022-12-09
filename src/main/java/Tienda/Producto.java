@@ -4,10 +4,10 @@ public class Producto {
     private String nombre;
     private int precio;
 
-    private int codigo;
+    private String codigo;
     private int existencias;
 
-    public Producto(String nombre, int precio, int codigo, int existencias){
+    public Producto(String nombre, int precio, String codigo, int existencias){
         this.nombre = nombre;
         this.precio = precio;
         this.existencias = existencias;
@@ -45,7 +45,7 @@ public class Producto {
         return this.existencias;
     }
 
-    public int getCodigo(){
+    public String getCodigo(){
         return this.codigo;
     }
 

@@ -4,7 +4,7 @@ public class Vendedor extends Usuario{
     //Atributos
 
     //Constructor
-    public Vendedor (String nombre,String rut,String nombreUsuario,String contrasena) {
+    public Vendedor (String nombreUsuario,String contrasena) {
         super(nombreUsuario,contrasena);
     }
     //Métodos

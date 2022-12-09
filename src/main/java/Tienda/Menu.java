@@ -33,9 +33,9 @@ public class Menu {
             case 1:
                 String nombreV = preguntarPalabra("nombre","producto");
                 int precioV = preguntarNumero("precio","producto");
-                int codigoV = preguntarNumero("código","producto");
+                //String codigoV = preguntarNumero("código","producto");
                 int cantidadV = preguntarNumero("cantidad","producto");
-                vender(nombreV,precioV,codigoV,cantidadV);
+                //vender(nombreV,precioV,codigoV,cantidadV);
                 break;
             case 2:
                 imprimirInventario();
@@ -97,7 +97,7 @@ public class Menu {
                 String nombreP = preguntarPalabra("nombre","producto");
                 int precioP = preguntarNumero("precio","producto");
                 int cantidadP = preguntarNumero("cantidad","producto");
-            añadirProducto(nombreP,precioP,cantidadP);
+            //añadirProducto(nombreP,precioP,cantidadP);
                 break;
             case 7:
                 logout();
@@ -109,10 +109,10 @@ public class Menu {
         }
     }
 
-    private  void añadirProducto(String nombre, int precio, int existencia){
+    /*private  void añadirProducto(String nombre, int precio, int existencia){
         this.productos.add(new Producto(nombre,precio,existencia,this.indice));
         this.indice++;
-    }
+    }*/
 
     //Reutilizable//
     private String preguntarPalabra(String palabra1, String palabra2){
@@ -159,7 +159,7 @@ public class Menu {
         System.out.println(toString());
     }
 
-    public void vender(String nombre, int precio,int codigo, int cantidad){
+    public void vender(String nombre, int precio,String codigo, int cantidad){
         int precioTotal;
 
         for(Producto producto:this.productos){
@@ -168,7 +168,7 @@ public class Menu {
                 precioTotal = producto.getPrecio()*cantidad;
                 nombre = producto.getNombre();
                 codigo = producto.getCodigo();
-                this.ventas.add(new Venta(nombre,precioTotal,codigo, cantidad));
+                //this.ventas.add(new Venta(nombre,precioTotal,codigo, cantidad));
                 mostrarVender(precioTotal);
             }
         }

@@ -1,5 +1,6 @@
 package Ventanas;
 
+import Gestores.GestorDatos;
 import Tienda.*;
 
 import javax.swing.*;
@@ -10,7 +11,6 @@ public class VentanaPrincipal extends Ventana{
     private JLabel textoMenu;
     private JLabel textoUsuario;
     private JLabel textoContrasena;
-    private JLabel imagenUsuario;
     private JTextField entradaTextoUsuario;
     private JPasswordField entradaTextoContrasena;
     private JButton botonIngresar;
@@ -94,7 +94,7 @@ public class VentanaPrincipal extends Ventana{
             this.dispose();
         }
         if(e.getSource() == this.botonSalida){
-            //HospitalController.almacenarDatos(this.hospital);
+            GestorDatos.registrarDatos(tienda.getUsuarios(),"C:\\Users\\josem\\IdeaProjects\\Tienda\\src\\main\\java\\Archivos\\Usuarios");
             this.dispose();
             System.exit(0);
         }

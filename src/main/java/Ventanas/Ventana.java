@@ -10,8 +10,8 @@ public class Ventana extends JFrame implements ActionListener{
     protected Ventana(String nombre, int largoX, int largoY){
         super(nombre);
         super.setVisible(true);
-//Indica que hará al intentar cerrar la ventana, (1) No hace nada al cerrar, (2) Ocultar al cerrar, (3) Salir al cerrar
-        super.setDefaultCloseOperation(3);
+//Indica que hará al intentar cerrar la ventana,(0) No cierra, (1) No hace nada al cerrar, (2) Ocultar al cerrar, (3) Salir al cerrar
+        super.setDefaultCloseOperation(0);
         super.setSize(largoX, largoY);
 //Centrar la ventana
         super.setLocationRelativeTo(null);
