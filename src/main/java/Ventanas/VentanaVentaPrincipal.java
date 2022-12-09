@@ -1,6 +1,7 @@
 package Ventanas;
 
 import Tienda.*;
+import Gestores.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -83,6 +84,8 @@ public class VentanaVentaPrincipal extends Ventana {
         }
         if (e.getSource() == this.botonVenta) {
             //Agregar Código Boleta
+            GestorPDF.generarBoletaCliente();
+
 
             new VentanaVendedor(tienda);
             //Cierra la ventana actual

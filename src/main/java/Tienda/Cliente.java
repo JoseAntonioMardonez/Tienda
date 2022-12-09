@@ -14,6 +14,9 @@ public class Cliente{
     public String getRut(){
         return this.rut;
     }
+    public String getNombre(){
+        return this.nombre;
+    }
     /*public String getTipo() {
         return "Cliente";
     }*/
