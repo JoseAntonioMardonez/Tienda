@@ -21,7 +21,7 @@ public class VentanaCarro extends JFrame {
         desplazamiento = new JScrollPane(tabla);
 
         // Parametros de la ventana
-        this.setTitle("JTable");
+        this.setTitle("Carro");
         this.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         this.setLayout(new BorderLayout());
 

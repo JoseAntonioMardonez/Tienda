@@ -9,6 +9,7 @@ public class VentanaAdministrador extends Ventana{
     private JButton botonMostrarInventario;
     private JButton botonBuscarProducto;
     private JButton botonAgregarProducto;
+    private JButton botonAgregarUsuario;
     private JButton botonVolver;
     private JLabel textoMenu;
     private Tienda tienda;
@@ -24,6 +25,7 @@ public class VentanaAdministrador extends Ventana{
         generarBotonMostrarInventario();
         generarBotonBuscarProducto();
         generarBotonAgregarProducto();
+        generarBotonAgregarUsuario();
         generarBotonVolver();
     }
     private void generarMensajeEncabezado() {
@@ -38,15 +40,21 @@ public class VentanaAdministrador extends Ventana{
     }
     private void generarBotonBuscarProducto() {
         String textoBoton = "Buscar Producto";
-        this.botonBuscarProducto = super.generarBoton(textoBoton, 175, 180, 150, 40);
+        this.botonBuscarProducto = super.generarBoton(textoBoton, 175, 160, 150, 40);
         this.add(this.botonBuscarProducto);
         this.botonBuscarProducto.addActionListener(this);
     }
     private void generarBotonAgregarProducto() {
         String textoBoton = "Agregar Producto";
-        this.botonAgregarProducto = super.generarBoton(textoBoton, 175, 260, 150, 40);
+        this.botonAgregarProducto = super.generarBoton(textoBoton, 175, 240, 150, 40);
         this.add(this.botonAgregarProducto);
         this.botonAgregarProducto.addActionListener(this);
+    }
+    private void generarBotonAgregarUsuario() {
+        String textoBoton = "Agregar Usuario";
+        this.botonAgregarUsuario = super.generarBoton(textoBoton, 175, 300, 150, 40);
+        this.add(this.botonAgregarUsuario);
+        this.botonAgregarUsuario.addActionListener(this);
     }
     private void generarBotonVolver() {
         String textoBoton = "Volver";
@@ -67,6 +75,11 @@ public class VentanaAdministrador extends Ventana{
         }
         if (e.getSource() == this.botonAgregarProducto) {
             VentanaAgregarProducto agregarProducto = new VentanaAgregarProducto(tienda);
+            //Cierra la ventana actual
+            this.dispose();
+        }
+        if (e.getSource() == this.botonAgregarUsuario) {
+            VentanaAgregarUsuarios agregarUsuario = new VentanaAgregarUsuarios(tienda);
             //Cierra la ventana actual
             this.dispose();
         }

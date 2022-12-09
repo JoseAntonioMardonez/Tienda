@@ -21,7 +21,7 @@ public class VentanaInventario extends JFrame {
         desplazamiento = new JScrollPane(tabla);
 
         // Parametros de la ventana
-        this.setTitle("JTable");
+        this.setTitle("Inventario");
         this.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
         this.setLayout(new BorderLayout());
 
